@@ -1,6 +1,8 @@
 import rootReducer from '../reducers';
-import {createStore} from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise-middleware';
 
-export default (initialState) => {
-  return createStore(rootReducer, initialState);
+
+export default () => {
+  return createStore(rootReducer, applyMiddleware(promiseMiddleware()));
 };
