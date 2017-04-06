@@ -4,14 +4,14 @@ class Input extends Component {
   constructor(props) {
     super(props);
 
-    this.onAddCityClick = this.onAddCity.bind(this);
+    this.onAddCityClick = this.onAddCityClick.bind(this);
   }
 
   onAddCityClick() {
     const inputElement = document.getElementById('input');
 
     this.props.fetchData({
-      name: inputElement.value,
+      city: inputElement.value,
     });
 
     inputElement.value = "";
