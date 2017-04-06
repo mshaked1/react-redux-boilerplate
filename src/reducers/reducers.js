@@ -31,6 +31,7 @@ export default function reducer (state = initialState, action) {
         error: true
       }
     default:
+      console.log('default reducer')
       return state
   }
 }
